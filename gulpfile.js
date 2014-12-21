@@ -32,12 +32,10 @@ gulp.task('style', [ 'jshint', 'jscs' ]);
  * Build tasks
  */
 
-_webpack = function(config, location) {
+_webpack = function(config) {
   
   var compiler = webpack(config);
 
-  del([ location ]);
-  
   return function(next) {
 
     return compiler.run(function(err, stats) {
@@ -55,7 +53,7 @@ _webpack = function(config, location) {
   };
 };
 
-gulp.task('build', [ 'style' ], _webpack(webpackConfig, './bundle.js'));
+gulp.task('build', [ 'style' ], _webpack(webpackConfig));
 
 /**
  * Server
