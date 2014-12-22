@@ -1,8 +1,21 @@
 .chart div {
   font: 10px sans-serif;
-  background-color: steelblue;
   text-align: right;
   padding: 3px;
   margin: 1px;
   color: white;
+}
+
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
+}
+
+.blue div {
+  background-color: blue;
+}
+
+.red rect {
+  fill: red;
 }
